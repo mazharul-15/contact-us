@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+body {
+    background-color: #262a51;
+}
+
+.main {
+    width: 75%;
+    /* height: ; */
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.col-3 {
+    background: #ff9c03;
+}
+
+.col-3 .icons-evlop {
+    padding-top: 70px;
+    font-size: 45px;
+    color: #fff;
+}
+
+.col-3 h2 {
+    padding-top: 25px;
+}
+
+.col-3 h4 {
+    padding-top: 20px;
+}
+
+.col-7 {
+
+}
