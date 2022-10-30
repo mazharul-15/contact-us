@@ -1,3 +1,5 @@
+
+    </section>
     <!-- Footer Area Start -->
     <footer class = "footer">
         <div class="footer-area">

@@ -1,12 +1,10 @@
 <?php
-    // Including top.php
+    //Including top.php
     include_once("top.php");
-
 ?>
 
-
     <!-- Content Area Start -->
-        <!-- Admin Details -->
+        
         <div class="content-area">
             <table>
                 <thead>
@@ -60,9 +58,8 @@
         </div>
     <!-- Content Area End -->
 
-    
+
 <?php
     // Including footer.php
     include_once("footer.php");
-
 ?>

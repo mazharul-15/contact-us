@@ -10,6 +10,16 @@
 
 a {
     text-decoration: none;
+    color: #4f4c4c;
+    font-weight: 600;
+}
+
+.m-2 {
+    margin-top: 10px;
+}
+
+.p-2 {
+    padding: 2px 2px;
 }
 
 /* .container {
@@ -24,6 +34,9 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
     padding: 25px 50px;
     box-shadow: 0px 2px 4px rgb(196 197 211 / 50%);
 }
@@ -48,8 +61,59 @@ a {
 /*----------------------------------------------------------------------------
                     Content Area CSS 
 ----------------------------------------------------------------------------*/
+.content {
+    display: flex;
+    /* justify-content: ; */
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    /* padding: 25px 50px; */
+    box-shadow: 0px 2px 4px rgb(196 197 211 / 50%);
+}
 
+.content .menu {
+    width: 25%;
+    height: 100vh;
+    padding: 25px 50px;
+    box-shadow: 0px 2px 4px rgb(196 197 211 / 50%);
+}
 
+.content .content-area {
+    background: #ccc5c5;
+    width: 75%;
+    height: 100vh;
+    padding: 30px;
+}
+
+.content-area table {
+    width: 100%;
+    /* border: 1px solid #000; */
+}
+
+.content-area table tr {
+    margin-top: 3px;
+    
+} 
+
+.content-area th,
+.content-area td {
+    /* width: 25%; */
+    /* border-bottom: 2px solid #000; */
+    /* background: #fff; */
+    text-align: left;
+    padding: 5px 3px;
+}
+#no, #id-no {
+    width: 5%;
+}
+
+#name, #email {
+    width: 35%;
+}
+
+#action {
+    width: 10%;
+}
 /*----------------------------------------------------------------------------
                     Footer CSS 
 ----------------------------------------------------------------------------*/
@@ -59,9 +123,9 @@ a {
     justify-content: center;
 }
 
-.footer .footer-area {
+/* .footer .footer-area {
 
-}
+} */
 
 .footer .footer-area a {
     color: #4f4c4c;
