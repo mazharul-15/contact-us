@@ -1,0 +1,68 @@
+/*----------------------------------------------------------------------------
+                    Global CSS
+----------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* .container {
+    padding: 30px;
+} */
+
+
+/*----------------------------------------------------------------------------
+                    Header CSS 
+----------------------------------------------------------------------------*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    box-shadow: 0px 2px 4px rgb(196 197 211 / 50%);
+}
+
+.header h1 {
+    font-size: 22px;
+    
+}
+
+.header h1 a {
+    color: rgb(70 69 69);
+}
+
+.header .account-area a {
+    /* text-decoration: none; */
+    color: #4f4c4c;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/*----------------------------------------------------------------------------
+                    Content Area CSS 
+----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------
+                    Footer CSS 
+----------------------------------------------------------------------------*/
+.footer {
+    padding: 25px 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footer-area {
+
+}
+
+.footer .footer-area a {
+    color: #4f4c4c;
+}

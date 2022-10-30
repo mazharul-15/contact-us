@@ -18,7 +18,7 @@ body {
     padding: 30px;
     margin: auto;
     border-radius: 8px;
-    /* margin-top: 50vh; */
+    margin-top: 10%;
 }
 
 .main .input-field {
@@ -28,7 +28,24 @@ body {
 .main .input-all {
     display: block;
     width: 100%;
+    margin-top: 5px;
     padding: 10px;
     border: 1px solid rgb(155, 153, 153);
     border-radius: 6px;
+}
+
+.main input[type="submit"] {
+    background: #34ace0;
+    /* width: 30%; */
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    padding: 6px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.main input[type="submit"]:hover {
+    background: #255164;
 }
