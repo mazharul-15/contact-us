@@ -11,7 +11,6 @@
 a {
     text-decoration: none;
     color: #4f4c4c;
-    font-weight: 600;
 }
 
 .m-2 {
@@ -48,15 +47,50 @@ a {
 
 .header h1 a {
     color: rgb(70 69 69);
+    font-weight: 600;
 }
 
-.header .account-area a {
-    /* text-decoration: none; */
+.header .account-area ul {
+    list-style: none;
+}
+
+.header .account-area .admin-name-a {
     color: #4f4c4c;
     font-size: 16px;
     font-weight: 600;
 }
 
+ul.admin-name li {
+    position: relative;
+}
+
+ul.admin-logout {
+    display: none;
+    background: #6b6868;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    position: absolute;
+    width: 123px;
+    top: 100%;
+    left: -5%;
+    margin: 0;
+    padding: 0;
+}
+
+ul.admin-logout li {
+    padding: 5px;
+}
+
+ul.admin-logout li a {
+    font-size: 13px;
+    color: #fff;
+}
+
+
+ul.admin-name li:hover ul.admin-logout {
+    display: block;
+    transition: 1.0s;
+}
 
 /*----------------------------------------------------------------------------
                     Content Area CSS 
@@ -76,6 +110,10 @@ a {
     height: 100vh;
     padding: 25px 50px;
     box-shadow: 0px 2px 4px rgb(196 197 211 / 50%);
+}
+
+.content .menu a {
+    font-weight: 600;
 }
 
 .content .content-area {

@@ -1,3 +1,19 @@
+<?php
+    // including backend
+    include_once("backend/function.php");
+
+    // checking admin login or not
+    session_start();
+    if(!isset($_SESSION['ADMIN_ID'])) {
+        ?>
+        <script>
+            console.log("HELLO!!!");
+        </script>
+        <?php
+        header("location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +35,21 @@
 
         <!-- Account Area -->
         <div class="account-area">
-            <a href="login.php">Log In</a>
+            <ul class = "admin-name">
+                <li>
+                    <a href="#" class = "admin-name-a">
+                        <?php
+                            if(isset($_SESSION['ADMIN_ID'])) {
+                                echo $_SESSION['ADMIN_NAME'];
+                            }
+                        ?>
+                    </a>
+                    <ul class = "admin-logout">
+                        <li ><a href="logout.php">Log Out</a></li>
+                        <li><a href="#">Account setting</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </header>
 

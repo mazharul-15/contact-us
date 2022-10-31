@@ -1,3 +1,29 @@
+<?php
+    // including backend
+    include_once("backend/function.php");
+
+    // Checking if logged in or not
+    session_start();
+    if(isset($_SESSION['ADMIN_NAME'])) {
+        header("location: admin-panel.php");
+    }
+
+    // Login Requests
+    if(isset($_POST['login'])) {
+        
+        //creating object
+        $admin = new adminContactUs();
+        $message = $admin->adminLogIn($_POST);
+        // prx($message);
+        if($message == "YES") {
+            header("location: admin-panel.php");
+            die();
+            // prx($message);
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +35,7 @@
 </head>
 <body>
     <div class="main">
-        <form action="#" method = "POST">
+        <form action="" method = "POST">
 
             <!-- Email -->
             <div class="input-field">
@@ -23,9 +49,18 @@
                 <input type="password" name="password" class = "input-all" id="password" placeholder = "enter your password">
             </div>
 
-            <!-- submit -->
+            <!-- Submit -->
             <div class="input-field">
-                <input type="submit" class = "input-all" value="Log In">
+                <input type="submit" name = "login" class = "input-all" value="Log In">
+            </div>
+
+            <!-- Error Message -->
+            <div class="input-field error-message">
+                <?php
+                    if(isset($message)) {
+                        echo "<p>$message</p>";
+                    }
+                ?>
             </div>
         </form>
     </div>

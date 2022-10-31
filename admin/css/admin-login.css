@@ -49,3 +49,7 @@ body {
 .main input[type="submit"]:hover {
     background: #255164;
 }
+
+.main .error-message {
+    color: #aa2020;
+}

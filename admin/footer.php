@@ -7,5 +7,5 @@
         </div>
     </footer>
     <!-- Footer Area End -->
-    </body>
+</body>
 </html>
