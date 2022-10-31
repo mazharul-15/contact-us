@@ -37,17 +37,16 @@
             // prx($password);
 
             $sql = "SELECT * FROM admin WHERE email = '$email' and password = '$password'";
-            $admin = mysqli_query($this->conn, $sql);
+            $res = mysqli_query($this->conn, $sql);
             // prx($admin);
 
-            if(mysqli_num_rows($admin) > 0) {
-                // prx("WOWOWWOWO");
-                $admin = mysqli_fetch_assoc(mysqli_query($this->conn, $sql));
+            if(mysqli_num_rows($res) > 0) {
+
+                $admin = mysqli_fetch_assoc($res);
                 // SESSION STARTED;
                 session_start();
                 $_SESSION['ADMIN_ID'] = $admin['id'];
                 $_SESSION['ADMIN_NAME'] = $admin['name'];
-                // prx($_SESSION['ADMIN_NAME']);
                 return "YES";
 
             }else {
@@ -56,6 +55,20 @@
 
             }
 
+        }
+
+        // Admin
+        public function adminInfo() {
+            $sql = "SELECT * FROM admin";
+            $res = mysqli_query($this->conn, $sql);
+
+            $dataArr = array();
+
+            while($rowData = mysqli_fetch_assoc($res)) {
+                $dataArr[] = $rowData;
+            }
+
+            return $dataArr;
         }
 
     }
