@@ -147,14 +147,14 @@ ul.admin-name li:hover ul.admin-logout {
 }
 
 #name, #email {
-    width: 35%;
+    width: 25%;
 }
 
-#action {
-    width: 10%;
+#action, #comment, #mobile {
+    width: 12%;
 }
 
-.admin-delete {
+.admin-delete, .user-delete {
     color: #d4c7c7;
     padding: 5px;
     background: #8f0606;

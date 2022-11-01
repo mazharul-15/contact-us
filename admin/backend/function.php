@@ -101,6 +101,23 @@
             }
         }
 
+        // Contact Us details
+        public function contactUsDetails($id = '') {
+            $sql = "SELECT * FROM `contact-us`";
+
+            if($id != '') {
+                $sql .= " WHERE id = $id";
+            }
+            $res = mysqli_query($this->conn, $sql);
+
+            $data = array();
+            while($row = mysqli_fetch_assoc($res)) {
+                $data[] = $row;
+            }
+
+            return $data;
+        }
+
     }
 
     // Checking DATA by printing that comes from DB or POST-GET method
