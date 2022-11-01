@@ -3,8 +3,7 @@
     include_once("top.php");
 
     // admin data fetching;
-    $admin = new adminContactUs();
-    $data = $admin->adminInfo();
+    $data = $admin->adminInfo('');
     // prx($data);
 ?>
 

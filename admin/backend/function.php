@@ -58,8 +58,13 @@
         }
 
         // Admin
-        public function adminInfo() {
+        public function adminInfo($admin_id = '') {
             $sql = "SELECT * FROM admin";
+
+            if($admin_id != '') {
+                $sql .= " WHERE id = $admin_id";
+            }
+
             $res = mysqli_query($this->conn, $sql);
 
             $dataArr = array();
@@ -69,6 +74,21 @@
             }
 
             return $dataArr;
+        }
+
+        // Admin Info Update
+        public function adminInfoUpdate($data) {
+            $id = $data['id'];
+            $name = $data['name'];
+            $email = $data['email'];
+            $password = md5($data['password']);
+
+            $sql = "UPDATE admin SET name = '$name', email = '$email', password = '$password' 
+            WHERE id = 0";
+            // prx($res = mysqli_query($this->conn, $sql));
+            if(mysqli_query($this->conn, $sql)) {
+                return "YES";
+            }
         }
 
     }

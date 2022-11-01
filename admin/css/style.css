@@ -95,6 +95,7 @@ ul.admin-name li:hover ul.admin-logout {
 /*----------------------------------------------------------------------------
                     Content Area CSS 
 ----------------------------------------------------------------------------*/
+/* Admin panel css start */
 .content {
     display: flex;
     /* justify-content: ; */
@@ -152,6 +153,45 @@ ul.admin-name li:hover ul.admin-logout {
 #action {
     width: 10%;
 }
+
+/* Admin panel css end */
+
+/* Account Setting CSS Start */
+
+.content-area form {
+    width: 70%;
+    margin: auto;
+}
+
+.content-area .input-field {
+    margin-top: 20px;
+}
+
+.content-area .input-all {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #000;
+    border-radius: 6px;
+}
+
+.content-area input[type="submit"] {
+    background: #34ace0;
+    /* width: 30%; */
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    padding: 6px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.content-area input[type="submit"]:hover {
+    background: #255164;
+}
+/* Account Setting CSS End */
 /*----------------------------------------------------------------------------
                     Footer CSS 
 ----------------------------------------------------------------------------*/

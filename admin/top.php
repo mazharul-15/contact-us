@@ -2,6 +2,9 @@
     // including backend
     include_once("backend/function.php");
 
+    // CREATING AN OBJECT
+    $admin = new adminContactUs();
+
     // checking admin login or not
     session_start();
     if(!isset($_SESSION['ADMIN_ID'])) {
@@ -46,7 +49,11 @@
                     </a>
                     <ul class = "admin-logout">
                         <li ><a href="logout.php">Log Out</a></li>
-                        <li><a href="#">Account setting</a></li>
+                        <li>
+                            <a href="account-setting.php?admin_id=<?php echo $_SESSION['ADMIN_ID'];?>">
+                                Account setting
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>
