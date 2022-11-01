@@ -2,6 +2,17 @@
     // Including top.php
     include_once("top.php");
 
+    // Deleting data from admin of DB
+    if(isset($_GET['action'])) {
+
+        if($_GET['action'] == 'delete') {
+
+            $message = $admin->adminINFODelete($_GET);
+            
+        }
+
+    }
+
     // admin data fetching;
     $data = $admin->adminInfo('');
     // prx($data);
@@ -26,12 +37,12 @@
                         $no = 1;
                         foreach($data as $list) { ?>
                     <tr>
-                        <td id = "no."><?php echo $no++; ?></td>
-                        <td id = "id-no"><?php echo $list['id'];?></td>
-                        <td id = "name"><?php echo $list['name'];?></td>
-                        <td id = "email"><?php echo $list['email'];?></td>
+                        <td><?php echo $no++; ?></td>
+                        <td><?php echo $list['id'];?></td>
+                        <td><?php echo $list['name'];?></td>
+                        <td><?php echo $list['email'];?></td>
                         <td>
-                            <a href="?admin_id=<?php echo $list['id'];?>">Delete</a>
+                            <a href="?action=delete&admin_id=<?php echo $list['id'];?>" class = "admin-delete">Delete</a>
                         </td>
                     </tr>
                     <?php } ?>

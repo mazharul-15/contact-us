@@ -140,7 +140,7 @@ ul.admin-name li:hover ul.admin-logout {
     /* border-bottom: 2px solid #000; */
     /* background: #fff; */
     text-align: left;
-    padding: 5px 3px;
+    padding: 10px 3px;
 }
 #no, #id-no {
     width: 5%;
@@ -152,6 +152,18 @@ ul.admin-name li:hover ul.admin-logout {
 
 #action {
     width: 10%;
+}
+
+.admin-delete {
+    color: #d4c7c7;
+    padding: 5px;
+    background: #8f0606;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.admin-delete:hover {
+    background: #4b0a0a;
 }
 
 /* Admin panel css end */

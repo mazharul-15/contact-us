@@ -91,6 +91,16 @@
             }
         }
 
+        // Admin Info Delete
+        public function adminINFODelete($data) {
+            $id = $data['admin_id'];
+            $sql = "DELETE FROM admin WHERE id = $id";
+
+            if(mysqli_query($this->conn, $sql)) {
+                return "YES";
+            }
+        }
+
     }
 
     // Checking DATA by printing that comes from DB or POST-GET method
