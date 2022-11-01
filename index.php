@@ -1,3 +1,24 @@
+<?php
+    // Including front-api
+    include_once("front-api/function.php");
+
+    // Creating an Object
+    $user = new userContactUs();
+
+    if(isset($_POST['submit'])) {
+        // prx($_POST);
+        $message = $user->userInfo($_POST);
+        if(isset($message) && $message == "YES") {
+            ?>
+            <script>
+                alert("Successfully Sent Your Info");
+            </script>
+            <?php
+        }
+
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,35 +40,35 @@
         </div>
         <div class="col-7">
             <div class="container">
-                <form action="#" method = "POST">
+                <form action="" method = "POST">
 
                         <!-- Name Field -->
                         <div class="input-field">
                             <label for="name">Name:</label>
-                            <input type="text" name="name" class = "input-all" id="name" placeholder="enter your name">
+                            <input type="text" name="name" class = "input-all" id="name" placeholder="enter your name" required>
                         </div>
         
                         <!-- Email Field -->
                         <div class="input-field">
                             <label for="email">Email:</label>
-                            <input type="email" name="email" class = "input-all" id="email" placeholder = "enter your email">
+                            <input type="email" name="email" class = "input-all" id="email" placeholder = "enter your email" required>
                         </div>
         
                         <!-- Mobile Field -->
                         <div class="input-field">
                             <label for="mobile">Mobile:</label>
-                            <input type="text" name="mobile" class = "input-all" id="mobile" placeholde = "enter your mobile">
+                            <input type="text" name="mobile" class = "input-all" id="mobile" placeholde = "enter your mobile" required>
                         </div>
         
                         <!-- Comment Field -->
                         <div class="input-field">
                             <label for="comment">Comment:</label>
-                            <textarea name="comment" class = "input-all" id="comment" cols="30" rows="10" placeholder = "write your comment"></textarea>
+                            <textarea name="comment" class = "input-all" id="comment" cols="30" rows="10" placeholder = "write your comment"  required></textarea>
                         </div>
         
                         <!-- Submit Field -->
                         <div class="input-field">
-                            <input type="submit" value="Submit">
+                            <input type="submit" name = "submit" value="Submit">
                         </div>
                     </div>
                 </form>
