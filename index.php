@@ -10,12 +10,54 @@
         $message = $user->userInfo($_POST);
         if(isset($message) && $message == "YES") {
 
+            //Collecting Data for Email
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $mobile = $_POST['mobile'];
+            $comment = $_POST['comment'];
+
+            // Making Table Format Data
+            $html = 
+            "<table>
+                <tr>
+                    <td>Name</td><td>$name</td>
+                </tr>
+                <tr>
+                    <td>Name</td><td>$email</td>
+                </tr>
+                <tr>
+                    <td>Name</td><td>$mobile</td>
+                </tr>
+                <tr>
+                    <td>Name</td><td>$comment</td>
+                </tr>
+            </table>";
+            // prx($html);
             // Sending Email to Admin.
-            ?>
-            <script>
-                alert("Successfully Sent Your Info");
-            </script>
-            <?php
+            include_once("smtp/PHPMailerAutoload.php");
+            $mail = new PHPMailer(true);
+            $mail->isSMTP();
+            $mail->Host = "smtp.gmail.com";
+            $mail->post = 587; // 465;
+            $mail->SMTPSecure = "tls";
+            $mail->SMTPAuth = true;
+            $mail->Username = "pilifedeveloping@gmail.com";
+            $mail->Password = "GooglePiLifeDeveloping^%$#@!";
+            $mail->SetFrom("pilifedeveloping@gmail.com");
+            $mail->addAddress($email);
+            $mail->IsHTML(true);
+            $mail->Subject = "Jammer's IT";
+            $mail->Body = $html;
+            $mail->SMTPOptions = array('ssl'=>array(
+                'verify_peer'=>false,
+                'verify_peer_name'=>false,
+                'allow_self_signed'=>false
+            ));
+            if($mail->send()) {
+                echo "mail sent";
+            }else {
+                echo "Not Sent";
+            }
         }
 
     }
@@ -71,6 +113,15 @@
                         <!-- Submit Field -->
                         <div class="input-field">
                             <input type="submit" name = "submit" value="Submit">
+                        </div>
+
+                        <!-- Message -->
+                        <div class="input-field">
+                            <?php
+                                if(isset($message) && $message == "YES") {
+                                    echo "<p style = 'color: red;'>Message Sent Successfullt!!";
+                                }
+                            ?>
                         </div>
                     </div>
                 </form>
