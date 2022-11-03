@@ -75,6 +75,7 @@ ul.admin-logout {
     left: -5%;
     margin: 0;
     padding: 0;
+    transition: all 1s ease-in;
 }
 
 ul.admin-logout li {
@@ -89,7 +90,7 @@ ul.admin-logout li a {
 
 ul.admin-name li:hover ul.admin-logout {
     display: block;
-    transition: 1.0s;
+    
 }
 
 /*----------------------------------------------------------------------------

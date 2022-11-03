@@ -9,6 +9,8 @@
         // prx($_POST);
         $message = $user->userInfo($_POST);
         if(isset($message) && $message == "YES") {
+
+            // Sending Email to Admin.
             ?>
             <script>
                 alert("Successfully Sent Your Info");
