@@ -109,7 +109,7 @@ ul.admin-name li:hover ul.admin-logout {
 
 .content .menu {
     width: 25%;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 25px 50px;
     box-shadow: 0px 2px 4px rgb(196 197 211 / 50%);
 }
@@ -121,7 +121,7 @@ ul.admin-name li:hover ul.admin-logout {
 .content .content-area {
     background: #ccc5c5;
     width: 75%;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 30px;
 }
 

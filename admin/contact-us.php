@@ -2,6 +2,12 @@
     //Including top.php
     include_once("top.php");
 
+    // deleting contact-us user message
+    if(isset($_GET['action']) && $_GET['action'] == "delete") {
+        $id = $_GET['contact_id'];
+        $admin->deleteContactUsMessage($id);
+    }
+
     // Geting contact-us data from DB
     $data = $admin->contactUsDetails('');
 ?>

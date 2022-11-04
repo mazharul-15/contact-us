@@ -118,6 +118,13 @@
             return $data;
         }
 
+        // Contact Us details
+        public function deleteContactUsMessage($id) {
+            $sql = "DELETE FROM `contact-us` WHERE id = $id";
+
+            mysqli_query($this->conn, $sql);
+        }
+
     }
 
     // Checking DATA by printing that comes from DB or POST-GET method
