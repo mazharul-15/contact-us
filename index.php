@@ -42,7 +42,7 @@
             $mail->SMTPSecure = "tls";
             $mail->SMTPAuth = true;
             $mail->Username = "pilifedeveloping@gmail.com";
-            $mail->Password = "GooglePiLifeDeveloping^%$#@!";
+            $mail->Password = "jafhdhrgawgsegfw"; // App Pasword: jafhdhrgawgsegfw
             $mail->SetFrom("pilifedeveloping@gmail.com");
             $mail->addAddress($email);
             $mail->IsHTML(true);
