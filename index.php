@@ -8,7 +8,7 @@
     if(isset($_POST['submit'])) {
         // prx($_POST);
         $message = $user->userInfo($_POST);
-        if(isset($message) && $message == "YES") {
+        /*if(isset($message) && $message == "YES") {
 
             //Collecting Data for Email
             $name = $_POST['name'];
@@ -20,16 +20,16 @@
             $html = 
             "<table>
                 <tr>
-                    <td>Name</td><td>$name</td>
+                    <td>Name: </td><td>$name</td>
                 </tr>
                 <tr>
-                    <td>Name</td><td>$email</td>
+                    <td>Email: </td><td>$email</td>
                 </tr>
                 <tr>
-                    <td>Name</td><td>$mobile</td>
+                    <td>Mobile: </td><td>$mobile</td>
                 </tr>
                 <tr>
-                    <td>Name</td><td>$comment</td>
+                    <td>Message: </td><td>$comment</td>
                 </tr>
             </table>";
             // prx($html);
@@ -53,12 +53,13 @@
                 'verify_peer_name'=>false,
                 'allow_self_signed'=>false
             ));
+            $mail->send();
             if($mail->send()) {
                 echo "mail sent";
             }else {
                 echo "Not Sent";
             }
-        }
+        }*/
 
     }
 ?>
@@ -112,7 +113,7 @@
         
                         <!-- Submit Field -->
                         <div class="input-field">
-                            <input type="submit" name = "submit" value="Submit">
+                            <input type="submit" name = "submit" value="Submit" onclick = "sendEmail()">
                         </div>
 
                         <!-- Message -->
@@ -123,11 +124,15 @@
                                 }
                             ?>
                         </div>
+                        <div class="input-field">
+                            <h5 id = "email-message"></h5>
+                        </div>
                     </div>
                 </form>
         </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="javascript/script.js"></script>
 </body>
 </html>
