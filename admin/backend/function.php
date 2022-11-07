@@ -125,6 +125,25 @@
             mysqli_query($this->conn, $sql);
         }
 
+        // User Details
+        public function userDetails() {
+            $sql = "SELECT * FROM users";
+
+            $res = mysqli_query($this->conn, $sql);
+
+            $data = array();
+            while($row = mysqli_fetch_assoc($res)) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+
+        // Delete User 
+        public function userDelete($id) {
+            $sql = "DELETE FROM users WHERE id = $id";
+            mysqli_query($this->conn, $sql);
+        }
+
     }
 
     // Checking DATA by printing that comes from DB or POST-GET method

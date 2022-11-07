@@ -1,6 +1,13 @@
 <?php
     //Including top.php
     include_once("top.php");
+
+    // Deleting user
+    if(isset($_GET['action']) && $_GET['action']=='delete') {
+        $admin->userDelete($_GET['id']);
+    }
+    // User Data from DB Table
+    $data = $admin->userDetails();
 ?>
 
     <!-- Content Area Start -->
@@ -17,42 +24,22 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                        $no = 1;
+                        foreach($data as $list) {
+                    ?>
                     <tr>
-                        <td id = "no.">1</td>
-                        <td id = "id-no">01</td>
-                        <td id = "name">Mazharul Islam</td>
-                        <td id = "email">mazharul@gmail.com</td>
+                        <td><?php echo $no++; ?></td>
+                        <td><?php echo $list['id']; ?></td>
+                        <td><?php echo $list['name']; ?></td>
+                        <td><?php echo $list['email']; ?></td>
                         <td>
-                            <button>Delete</button>
+                            <a href="?action=delete&id=<?php echo $list['id']; ?>">Delete</a>
                         </td>
                     </tr>
-                    <tr>
-                        <td id = "no.">1</td>
-                        <td id = "id-no">01</td>
-                        <td id = "name">Mazharul Islam</td>
-                        <td id = "email">mazharul@gmail.com</td>
-                        <td>
-                            <button>Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id = "no.">1</td>
-                        <td id = "id-no">01</td>
-                        <td id = "name">Mazharul Islam</td>
-                        <td id = "email">mazharul@gmail.com</td>
-                        <td>
-                            <button>Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id = "no.">1</td>
-                        <td id = "id-no">01</td>
-                        <td id = "name">Mazharul Islam</td>
-                        <td id = "email">mazharul@gmail.com</td>
-                        <td>
-                            <button>Delete</button>
-                        </td>
-                    </tr>
+                    <?php
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>

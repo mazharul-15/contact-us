@@ -87,48 +87,48 @@
             <div class="container">
                 <form action="" method = "POST">
 
-                        <!-- Name Field -->
-                        <div class="input-field">
-                            <label for="name">Name:</label>
-                            <input type="text" name="name" class = "input-all" id="name" placeholder="enter your name" required>
-                        </div>
+                    <!-- Name Field -->
+                    <div class="input-field">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" class = "input-all" id="name" placeholder="enter your name" required>
+                    </div>
         
-                        <!-- Email Field -->
-                        <div class="input-field">
-                            <label for="email">Email:</label>
-                            <input type="email" name="email" class = "input-all" id="email" placeholder = "enter your email" required>
-                        </div>
+                    <!-- Email Field -->
+                    <div class="input-field">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" class = "input-all" id="email" placeholder = "enter your email" required>
+                    </div>
         
-                        <!-- Mobile Field -->
-                        <div class="input-field">
-                            <label for="mobile">Mobile:</label>
-                            <input type="text" name="mobile" class = "input-all" id="mobile" placeholde = "enter your mobile" required>
-                        </div>
+                    <!-- Mobile Field -->
+                    <div class="input-field">
+                        <label for="mobile">Mobile:</label>
+                        <input type="text" name="mobile" class = "input-all" id="mobile" placeholde = "enter your mobile" required>
+                    </div>
         
-                        <!-- Comment Field -->
-                        <div class="input-field">
-                            <label for="comment">Comment:</label>
-                            <textarea name="comment" class = "input-all" id="comment" cols="30" rows="10" placeholder = "write your comment"  required></textarea>
-                        </div>
+                    <!-- Comment Field -->
+                    <div class="input-field">
+                        <label for="comment">Comment:</label>
+                        <textarea name="comment" class = "input-all" id="comment" cols="30" rows="10" placeholder = "write your comment"  required></textarea>
+                    </div>
         
-                        <!-- Submit Field -->
-                        <div class="input-field">
-                            <input type="submit" name = "submit" value="Submit" onclick = "sendEmail()">
-                        </div>
+                    <!-- Submit Field -->
+                    <div class="input-field">
+                        <input type="submit" name = "submit" value="Submit" onclick = "sendEmail()">
+                    </div>
 
-                        <!-- Message -->
-                        <div class="input-field">
-                            <?php
-                                if(isset($message) && $message == "YES") {
-                                    echo "<p style = 'color: red;'>Message Sent Successfullt!!";
-                                }
-                            ?>
-                        </div>
-                        <div class="input-field">
-                            <h5 id = "email-message"></h5>
-                        </div>
+                    <!-- Message -->
+                    <div class="input-field">
+                        <?php
+                            if(isset($message) && $message == "YES") {
+                                echo "<p style = 'color: red;'>Message Sent Successfullt!!";
+                            }
+                        ?>
+                    </div>
+                    <div class="input-field">
+                        <h5 id = "email-message"></h5>
                     </div>
                 </form>
+            </div>
         </div>
     </div>
 

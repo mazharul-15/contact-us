@@ -5,7 +5,7 @@
     $email = $_POST['email'];
     $mobile = $_POST['mobile'];
     $comment = $_POST['comment'];
-
+    // return "Hello!!";
     // Making Table Format Data
     function prx($data) {
 
@@ -53,8 +53,8 @@
     ));
     //$mail->send();
     if($mail->send()) {
-        echo "mail sent";
+        return "mail sent";
     }else {
-        echo "Not Sent";
+        return "Not Sent";
     }
 ?>
