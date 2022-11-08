@@ -8,7 +8,7 @@
     if(isset($_POST['submit'])) {
         // prx($_POST);
         $message = $user->userInfo($_POST);
-        /*if(isset($message) && $message == "YES") {
+        if(isset($message) && $message == "YES") {
 
             //Collecting Data for Email
             $name = $_POST['name'];
@@ -42,7 +42,7 @@
             $mail->SMTPSecure = "tls";
             $mail->SMTPAuth = true;
             $mail->Username = "pilifedeveloping@gmail.com";
-            $mail->Password = "jafhdhrgawgsegfw"; // App Pasword: jafhdhrgawgsegfw
+            $mail->Password = "mbxidpyyzquooeyn"; // App Pasword: mbxidpyyzquooeyn
             $mail->SetFrom("pilifedeveloping@gmail.com");
             $mail->addAddress($email);
             $mail->IsHTML(true);
@@ -59,7 +59,7 @@
             }else {
                 echo "Not Sent";
             }
-        }*/
+        }
 
     }
 ?>
@@ -111,9 +111,14 @@
                         <textarea name="comment" class = "input-all" id="comment" cols="30" rows="10" placeholder = "write your comment"  required></textarea>
                     </div>
         
+                    <!-- Submit Field By AJAX -->
+                    <!-- <div class="input-field">
+                        <input type="submit" name = "submit" value="Submit" onclick = "sendEmail()">
+                    </div> -->
+
                     <!-- Submit Field -->
                     <div class="input-field">
-                        <input type="submit" name = "submit" value="Submit" onclick = "sendEmail()">
+                        <input type="submit" name = "submit" value="Submit">
                     </div>
 
                     <!-- Message -->

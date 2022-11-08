@@ -8,10 +8,11 @@ function sendEmail() {
     var mobile = jQuery("#mobile").val();
     var comment = jQuery("#comment").val();
     // console.log("HELLLLLLLLLLLLLL!!");
+    console.log(comment);
     jQuery.ajax({
         url: 'send_email.php',
         type: 'POST',
-        data: 'name=' + name + '&email=' + email + '&mobile=' + mobile + '&comment=' + comment,
+        data: 'name='+name+'&email='+email+'&mobile='+mobile+'&comment='+comment,
         success: function (result) {
             console.log(result);
             // console.log("HELLLLLLLLLLLLLL!!!!!2222");
