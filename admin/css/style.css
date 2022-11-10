@@ -31,6 +31,7 @@ a {
 ----------------------------------------------------------------------------*/
 .header {
     display: flex;
+    background: #fff;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -66,7 +67,7 @@ ul.admin-name li {
 
 ul.admin-logout {
     display: none;
-    background: #6b6868;
+    background: #4f4949;
     border: 1px solid #fff;
     border-radius: 8px;
     position: absolute;
